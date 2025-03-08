@@ -60,7 +60,7 @@ public class BasicController {
         model.addAttribute("request", request);
         model.addAttribute("response", response);
         model.addAttribute("servletContext", request.getServletContext());
-        // model.addAttribute("session", session);
+        model.addAttribute("session", session);
         return "basic/basic-objects";
     }
 
@@ -77,7 +77,11 @@ public class BasicController {
         return "basic/link";
     }
 
-
+    @GetMapping("/literal")
+    public String literal(Model model) {
+        model.addAttribute("data", "Thymeleaf!");
+        return "basic/literal";
+    }
 
     @Component("helloBean")
     static class HelloBean {
