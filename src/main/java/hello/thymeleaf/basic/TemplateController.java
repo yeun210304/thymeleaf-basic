@@ -22,5 +22,4 @@ public class TemplateController {
     public String layoutExtend() {
         return "template/layoutExtend/layoutExtendMain";
     }
-
 }
